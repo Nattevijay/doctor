@@ -88,7 +88,7 @@ const addDoctor = async (req, res) => {
       message: "Doctor Added",
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     res.json({
       success: false,
       message: error.message,
@@ -118,7 +118,7 @@ const loginAdmin = async (req, res) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     res.json({
       success: false,
       message: error.message,
@@ -136,7 +136,7 @@ const allDoctors = async (req, res) => {
       doctors,
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     res.json({
       success: false,
       message: error.message,
@@ -154,7 +154,7 @@ const appointmentsAdmin = async (req, res) => {
       appointments,
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     res.json({
       success: false,
       message: error.message,

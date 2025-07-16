@@ -20,7 +20,7 @@ const authDoctor = async (req, res, next) => {
     req.doctor = { id: tokenDecode.id }; // Use req.user instead of req.body
     next();
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     res.json({
       success: false,
       message: error.message,
