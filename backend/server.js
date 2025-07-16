@@ -9,8 +9,8 @@ import userRouter from "./routes/userRoute.js";
 
 const app = express();
 const port = process.env.PORT || 4000;
-connectDb();
-connectCloudinary();
+await connectDb();
+await connectCloudinary();
 
 app.use(express.json());
 app.use(cors());
